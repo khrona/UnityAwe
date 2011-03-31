@@ -3,7 +3,7 @@ using System.Collections;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using System.Threading;
-using AwesomiumSharp;
+using AwesomiumMono;
 
 public class WebCoreHelper : MonoBehaviour {
 	public void Start(){
