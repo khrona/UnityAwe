@@ -107,7 +107,7 @@ public class RenderToTexture : MonoBehaviour {
 	}
 	
 	void OnGUI() {
-		
+	
         Event e = Event.current;
 		
 		//We only inject input when the GameObject has focus
