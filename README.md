@@ -1,13 +1,18 @@
-UnityAwe is a simple drag-and-drop C# script for using Awesomium in Unity. Simply add WebTexture.cs, WebCoreHelper.cs, and AwesomiumMono.dll to your assets folder and drag the "WebTexture" script onto any game object or GUI texture. 
+UnityAwe is a Unity3D wrapper for the Awesomium Web-Browser Framework. It allows you to render and interact with web-pages within any Unity3D scene.
 
-Be sure to include AwesomiumMono's dll and dependencies (everything within the build/bin/release folder in the SDK) in the assets folder and in Unity's editor folder.
+Simply add `WebTexture.cs`, `WebCoreHelper.cs`, and `AwesomiumMono.dll` to your assets folder and drag the "WebTexture" script onto any game object or GUI texture. 
+
+Be sure to also include the contents of the Awesomium SDK (everything within the `build/bin/release` folder in the SDK) in your assets folder and in Unity's editor folder.
 
 To build AwesomiumMono, please check out khrona/AwesomiumSharp on GitHub.
 
 Unity's Editor folder locations:
-Windows = C:\Program Files\Unity\Editor
-Mac = /Applications/Unity/Unity.app/Contents/Frameworks
 
+Windows = `C:\Program Files\Unity\Editor`
+
+Mac = `/Applications/Unity/Unity.app/Contents/Frameworks`
+
+---
 
 Getting this working with Mac OSX can be a little complicated so I have provided full directions below:
 
