@@ -1,6 +1,6 @@
 # Web-Browsing in Unity3D
 
-UnityAwe is a Unity3D wrapper for the Awesomium Web-Browser Framework. It allows you to render and interact with web-pages within any Unity3D scene.
+UnityAwe is a Unity3D wrapper for the [http://awesomium.com](Awesomium Web-Browser Framework). It allows you to render and interact with web-pages within any Unity3D scene.
 
 ## How Do I Use This?
 
@@ -43,3 +43,9 @@ Getting this working with Mac OSX can be a little complicated so I have provided
 4. Drag the WebTexture script onto your new GUITexture.
 5. Modify the script properties in the Unity editor (change width, initial URL, etc.)
 6. Run your scene, you should be able to render and interact with a WebView wherever you placed your GUITexture.
+
+## Licensing
+
+Awesomium is free for evaluation, non-commercial use, and independent use (by companies who made less than $100K in revenue last year).
+
+If you're a larger company and would like to use Awesomium for commercial use, you can purchase a Pro License at http://awesomium.com/buy/
