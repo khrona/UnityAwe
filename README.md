@@ -14,9 +14,8 @@ Windows = `C:\Program Files\Unity\Editor`
 
 Mac = `/Applications/Unity/Unity.app/Contents/Frameworks`
 
----
 
-# Using UnityAwe with Mac OSX
+## Using With Mac OSX
 
 Getting this working with Mac OSX can be a little complicated so I have provided full directions below:
 
