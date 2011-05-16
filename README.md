@@ -1,6 +1,6 @@
 # Web-Browsing in Unity3D
 
-UnityAwe is a Unity3D wrapper for the [http://awesomium.com](Awesomium Web-Browser Framework). It allows you to render and interact with web-pages within any Unity3D scene.
+UnityAwe is a Unity3D wrapper for the [Awesomium Web-Browser Framework](http://awesomium.com). It allows you to render and interact with web-pages within any Unity3D scene.
 
 ## How Do I Use This?
 
