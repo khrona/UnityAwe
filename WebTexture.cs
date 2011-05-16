@@ -150,7 +150,6 @@ public class WebTexture : MonoBehaviour {
 
             if(webView.IsDirty())
             {
-                Debug.Log("Updating WebView buffer");
                 RenderBuffer rBuffer = webView.Render();
                 rBuffer.CopyToFloat(PixelsHandle.AddrOfPinnedObject());
                 texture.SetPixels (Pixels, 0);

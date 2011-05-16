@@ -1,12 +1,14 @@
+# Web-Browsing in Unity3D
+
 UnityAwe is a Unity3D wrapper for the Awesomium Web-Browser Framework. It allows you to render and interact with web-pages within any Unity3D scene.
 
-Simply add `WebTexture.cs`, `WebCoreHelper.cs`, and `AwesomiumMono.dll` to your assets folder and drag the "WebTexture" script onto any game object or GUI texture. 
+## How Do I Use This?
+
+Simply add `WebTexture.cs`, `WebCoreHelper.cs`, and `AwesomiumMono.dll` to your assets folder and drag the "WebTexture" script onto any game object or GUI texture. To build AwesomiumMono, please check out khrona/AwesomiumSharp on GitHub.
 
 Be sure to also include the contents of the Awesomium SDK (everything within the `build/bin/release` folder in the SDK) in your assets folder and in Unity's editor folder.
 
-To build AwesomiumMono, please check out khrona/AwesomiumSharp on GitHub.
-
-Unity's Editor folder locations:
+### Unity's Editor folder locations:
 
 Windows = `C:\Program Files\Unity\Editor`
 
@@ -14,9 +16,11 @@ Mac = `/Applications/Unity/Unity.app/Contents/Frameworks`
 
 ---
 
+# Using UnityAwe with Mac OSX
+
 Getting this working with Mac OSX can be a little complicated so I have provided full directions below:
 
-**Build AwesomiumMono on Mac OSX:**
+### Build AwesomiumMono on Mac OSX
 
 1. Checkout AwesomiumSharp files off of GitHub.
 2. Open up MonoDevelop and create a new Solution with type "C# Library", name it "AwesomiumMono".
@@ -25,13 +29,13 @@ Getting this working with Mac OSX can be a little complicated so I have provided
 5. Open up WebCore.cs and change WebCore.DLLName to `"@executable_path/../Frameworks/Awesomium.framework/Versions/A/Awesomium"`
 6. Build the solution (should end up with AwesomiumMono.dll in project's bin directory).
 
-**Set Up Unity IDE:**
+### Set Up Unity IDE
 
 1. Find the "Unity" application on your hard drive.
 2. Right-click, "Show Package Contents"
 3. Copy Awesomium.framework (from the SDK) into "Unity/Contents/Frameworks/"
 
-**Set Up Unity Project:**
+### Set Up Unity Project
 
 1. Create a new Unity project/scene.
 2. Check out UnityAwe from GitHub.
