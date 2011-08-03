@@ -8,7 +8,7 @@ This version depends on Awesomium 1.6.2 and Unity 3.4.
 
 ## How Do I Use This?
 
-1. Copy the "release" files from the Awesomium SDK to your Unity Editor's path.
+1. Copy the "release" files from the Awesomium SDK to your Unity Editor's path. (on Windows: Awesomium.dll, AwesomiumProcess.exe, icudt42.dll, locales folder -- on Mac OSX: Awesomium.framework)
 
 2. Add `WebTexture.cs`, `WebCoreHelper.cs`, and `AwesomiumMono.dll` to your assets folder.
 
@@ -27,6 +27,12 @@ When copying to the Mac application, you may need to right-click the Unity app, 
 ### Displaying with GUITexture
 
 Make sure your GUITexture pixel inset size matches the size specified in the WebTexture script, otherwise mouse input won't work correctly.
+
+### Deploying Your Application
+
+Make sure to copy over the Awesomium SDK files to your respective application.
+
+On Mac, you will need to copy `Awesomium.framework` to your application bundle's `Frameworks` folder (right-click, show package contents).
 
 ## Known Issues
 
