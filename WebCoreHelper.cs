@@ -5,12 +5,16 @@ using System.Collections.Generic;
 using System.Threading;
 using AwesomiumMono;
 
-public class WebCoreHelper : MonoBehaviour {
-	public void Start(){
-		  InvokeRepeating("tick", 0, 0.015F);
-	}
-	
-	public void tick() {
-		WebCore.Update();
-	}
+public class WebCoreHelper : MonoBehaviour
+{
+    public void Start()
+    {
+        InvokeRepeating("tick", 0, 0.020F);
+        Debug.Log("Started WebCoreHelper!");
+    }
+
+    public void tick()
+    {
+        WebCore.Update();
+    }
 }
