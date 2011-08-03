@@ -1,48 +1,42 @@
 # Web-Browsing in Unity3D
 
-UnityAwe is a Unity3D wrapper for the [Awesomium Web-Browser Framework](http://awesomium.com). It allows you to render and interact with web-pages within any Unity3D scene.
+UnityAwe is a Unity3D wrapper for [Awesomium](http://awesomium.com). It allows you to render and interact with web-pages within any Unity3D scene.
+
+## Dependencies
+
+This version depends on Awesomium 1.6.2 and Unity 3.4.
 
 ## How Do I Use This?
 
-Simply add `WebTexture.cs`, `WebCoreHelper.cs`, and `AwesomiumMono.dll` to your assets folder and drag the "WebTexture" script onto any game object or GUI texture. To build AwesomiumMono, please check out khrona/AwesomiumSharp on GitHub.
+1. Copy the "release" files from the Awesomium SDK to your Unity Editor's path.
 
-Be sure to also include the contents of the Awesomium SDK (everything within the `build/bin/release` folder in the SDK) in your assets folder and in Unity's editor folder.
+2. Add `WebTexture.cs`, `WebCoreHelper.cs`, and `AwesomiumMono.dll` to your assets folder.
 
-### Unity's Editor folder locations:
+3. Drag the "WebTexture" script onto any game object or GUI texture to make it display a web-page.
 
-Windows = `C:\Program Files\Unity\Editor`
+We've also provided an example script (Example_CustomHTML.cs) that demonstrates how to load custom HTML, bind properties/callbacks to Javascript, and more. Just add it to your asset folder and drag it to a GameObject or GUITexture to make it display.
+
+### Common Unity3D Editor folder paths:
+
+Windows = `C:\Program Files(x86)\Unity\Editor`
 
 Mac = `/Applications/Unity/Unity.app/Contents/Frameworks`
 
+When copying to the Mac application, you may need to right-click the Unity app, and select `Show Package Contents`.
 
-## Using With Mac OSX
+### Displaying with GUITexture
 
-Getting this working with Mac OSX can be a little complicated so I have provided full directions below:
+Make sure your GUITexture pixel inset size matches the size specified in the WebTexture script, otherwise mouse input won't work correctly.
 
-### Build AwesomiumMono on Mac OSX
+## Known Issues
 
-1. Checkout AwesomiumSharp files off of GitHub.
-2. Open up MonoDevelop and create a new Solution with type "C# Library", name it "AwesomiumMono".
-3. Add WebCore.cs, WebView.cs, RenderBuffer.cs, KeyboardCodes.cs, and JSValue.cs to the project.
-4. Go to Project Options, and under Build -> Compiler settings, add "USING_MONO" to Define Symbols.
-5. Open up WebCore.cs and change WebCore.DLLName to `"@executable_path/../Frameworks/Awesomium.framework/Versions/A/Awesomium"`
-6. Build the solution (should end up with AwesomiumMono.dll in project's bin directory).
+Awesomium doesn't like to be initialized more than once per-process, so some web-pages will not display twice in a row inside the Editor (eg, pushing play, stop, play, stop).
 
-### Set Up Unity IDE
+## AwesomiumMono
 
-1. Find the "Unity" application on your hard drive.
-2. Right-click, "Show Package Contents"
-3. Copy Awesomium.framework (from the SDK) into "Unity/Contents/Frameworks/"
+We've provided a copy of AwesomiumMono.dll for Windows and Mac OSX inside the `bin` folder.
 
-### Set Up Unity Project
-
-1. Create a new Unity project/scene.
-2. Check out UnityAwe from GitHub.
-2. Add WebTexture.cs, WebCoreHelper.cs, and AwesomiuMono.dll to assets folder.
-3. Create a new GUITexture game object in your scene.
-4. Drag the WebTexture script onto your new GUITexture.
-5. Modify the script properties in the Unity editor (change width, initial URL, etc.)
-6. Run your scene, you should be able to render and interact with a WebView wherever you placed your GUITexture.
+To build AwesomiumMono, please check out khrona/AwesomiumSharp on GitHub.
 
 ## Licensing
 
