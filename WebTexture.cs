@@ -223,7 +223,7 @@ public class WebTexture : MonoBehaviour
 
         if (webView.IsDirty)
         {
-            RenderBuffer rBuffer = webView.Render();
+            AwesomiumMono.RenderBuffer rBuffer = webView.Render();
 
             if (rBuffer != null)
             {
